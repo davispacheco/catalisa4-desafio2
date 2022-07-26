@@ -31,7 +31,7 @@ public class Cliente extends Pessoa{
     @Override
     public void listar(){
         for (int i = 0; i < clientes.size(); i++){
-            System.out.println(clientes.toArray(i));
+            System.out.println(clientes);
         }
 
     }
