@@ -45,4 +45,4 @@ Pessoas desenvolvedoras desse projeto:
 :one:Davi Sardinha Pacheco;
 :two:Eve Olegario;
 :three:Matheus Felipe Pereira Rocha; 
-:four:Percid Cristina Pimenta e Souza.
+:four:Persidh Cristina Pimenta e Souza.
