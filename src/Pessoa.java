@@ -1,6 +1,6 @@
 package src;
 
-public abstract class Pessoa {
+public abstract class Pessoa implements Acoes{
 
     private String nome;
     private String cpf;
