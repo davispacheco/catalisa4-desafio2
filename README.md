@@ -39,9 +39,10 @@ Faça um sistema responsável por registros de vendas de uma organização. Toda
   
 :small_blue_diamond: O sistema permite pesquisar todas as vendas de um vendedor em específico através de seu e-mail. 
 
-O grupo possui os seguintes membros: 
-
-Davi Sardinha Pacheco;
-Eve Olegario;
-Matheus Felipe Pereira Rocha; 
-Percid Cristina Pimenta e Souza.
+  
+  
+Pessoas desenvolvedoras desse projeto: 
+:one:Davi Sardinha Pacheco;
+:two:Eve Olegario;
+:three:Matheus Felipe Pereira Rocha; 
+:four:Percid Cristina Pimenta e Souza.
