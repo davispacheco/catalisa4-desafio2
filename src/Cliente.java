@@ -10,7 +10,7 @@ public class Cliente extends Pessoa{
 
     Scanner scan = new Scanner(System.in);
     private Set<Cliente> clientes = new HashSet<>();
-    private ArrayList<String> produtosComprados = new HashSet<>();
+    private ArrayList<String> produtosComprados = new ArrayList<>();
 
     public Cliente(String nome, String cpf, String email) {
     this.setNome(nome);
@@ -27,9 +27,14 @@ public class Cliente extends Pessoa{
         String novoCPF = scan.next();
         System.out.println("Qual o email do cliente (use o formato xxxx@xxxx.com");
         String novoEmail = scan.next();
+        if (novoEmail.contains("@")){
+            Cliente novoCliente = new Cliente(novoNome, novoCPF, novoEmail);
+            clientes.add(novoCliente);
 
-        Cliente novoCliente = new Cliente(novoNome, novoCPF, novoEmail);
-        clientes.add(novoCliente);
+        }else {
+            System.out.println("Email invalido");
+        }
+
 
     }
     @Override
