@@ -1,5 +1,6 @@
 package src;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -9,9 +10,12 @@ public class Cliente extends Pessoa{
 
     Scanner scan = new Scanner(System.in);
     private Set<Cliente> clientes = new HashSet<>();
+    private ArrayList<String> produtosComprados = new HashSet<>();
 
     public Cliente(String nome, String cpf, String email) {
-
+    this.setNome(nome);
+    this.setCpf(cpf);
+    this.setEmail(email);
     }
 
 
@@ -30,10 +34,11 @@ public class Cliente extends Pessoa{
     }
     @Override
     public void listar(){
-        for (int i = 0; i < clientes.size(); i++){
-            System.out.println(clientes);
+        for (Cliente cliente : clientes) {
+            System.out.println("CLiente: " +cliente.getNome());
         }
 
     }
+
 
 }
