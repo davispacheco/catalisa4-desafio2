@@ -2,7 +2,7 @@ package src;
 
 public interface Acoes {
 
-    void cadastrar();
+    void cadastrar(Pessoa pessoa);
     void listar();
 
 
