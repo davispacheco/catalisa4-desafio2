@@ -4,12 +4,12 @@ public class Vendedor extends Pessoa{
 
 
     @Override
-    public void cadastrar(Organizacao organizacao) {
+    public void cadastrar() {
 
     }
 
     @Override
-    public void listar(Organizacao organizacao) {
+    public void listar() {
 
     }
 }
