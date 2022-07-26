@@ -6,11 +6,11 @@ import java.util.Set;
 public class Organizacao {
     public static void main(String[] args) {
 
-        Cliente ClienteIncial = new Cliente(null, null, null);
+        Cliente clienteInicial = new Cliente(null, null, null);
 
-        ClienteIncial.listar();
-        ClienteIncial.cadastrar();
-        ClienteIncial.cadastrar();
+        clienteInicial.listar();
+        clienteInicial.cadastrar();
+        clienteInicial.cadastrar();
 
         ClienteIncial.listar();
 
