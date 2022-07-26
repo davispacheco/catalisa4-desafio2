@@ -1,5 +1,6 @@
 package src;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -9,6 +10,7 @@ public class Cliente extends Pessoa{
 
     Scanner scan = new Scanner(System.in);
     private Set<Cliente> clientes = new HashSet<>();
+    private ArrayList<String> produtosComprados = new HashSet<>();
 
     public Cliente(String nome, String cpf, String email) {
     this.setNome(nome);
