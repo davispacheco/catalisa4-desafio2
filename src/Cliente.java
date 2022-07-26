@@ -1,36 +1,40 @@
 package src;
 
+import java.security.PrivateKey;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Cliente extends Pessoa{
-
-
-    Scanner scan = new Scanner(System.in);
+public class Cliente extends Pessoa {
+    private String nome;
+    private String cpf;
+    private String email;
     private Set<Cliente> clientes = new HashSet<>();
 
-    public Cliente(String nome, String cpf, String email) {
-
+    public Cliente() {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.email = email;
+        this.clientes = clientes;
     }
 
 
     @Override
-    public void cadastrar(){
+    public void cadastrar(Cliente cliente) {
+        Scanner scan = new Scanner(System.in);
         System.out.println("Qual o nome do cliente?");
-        String novoNome = scan.next();
+        Nome = scan.next();
         System.out.println("Qual o CPF do cliente?");
-        String novoCPF = scan.next();
+        cpf = scan.next();
         System.out.println("Qual o email do cliente (use o formato xxxx@xxxx.com");
-        String novoEmail = scan.next();
-
-        Cliente novoCliente = new Cliente(novoNome, novoCPF, novoEmail);
-        clientes.add(novoCliente);
+        email = scan.next();
+        this.clientes.add(this);
 
     }
+
     @Override
-    public void listar(){
-        for (int i = 0; i < clientes.size(); i++){
+    public void listar() {
+        for (int i = 0; i < clientes.size(); i++) {
             System.out.println(clientes);
         }
 
