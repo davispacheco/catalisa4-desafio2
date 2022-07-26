@@ -2,12 +2,12 @@ package src;
 
 public class Cliente extends Pessoa{
     @Override
-    public void cadastrar(){
+    public void cadastrar(Organizacao organizacao){
 
 
     }
     @Override
-    public void listar(){
+    public void listar(Organizacao organizacao){
 
     }
 
