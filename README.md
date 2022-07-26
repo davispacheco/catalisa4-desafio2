@@ -1,13 +1,6 @@
 # catalisa4-desafio2
 Desafio em grupo para finalizar o módulo 3
 
-O grupo possui os seguintes membros: 
-
-Davi Sardinha Pacheco;
-Eve Olegario;
-Matheus Felipe Pereira Rocha; 
-Percid Cristina Pimenta e Souza.
-
 *<h1>DESCRIÇÃO<h1>*
 
 Faça um sistema responsável por registros de vendas de uma organização. Toda venda possui um cliente, vendedor responsável, valor a ser pago e data de registro. 
@@ -46,3 +39,9 @@ Faça um sistema responsável por registros de vendas de uma organização. Toda
   
 :small_blue_diamond: O sistema permite pesquisar todas as vendas de um vendedor em específico através de seu e-mail. 
 
+O grupo possui os seguintes membros: 
+
+Davi Sardinha Pacheco;
+Eve Olegario;
+Matheus Felipe Pereira Rocha; 
+Percid Cristina Pimenta e Souza.
