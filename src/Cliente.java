@@ -1,17 +1,15 @@
 package src;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
+
 
 public class Cliente extends Pessoa {
 
 
     Scanner scan = new Scanner(System.in);
-    private Set<Cliente> clientes = new HashSet<>();
+    private ArrayList<Cliente> clientes = new ArrayList<>();
     private ArrayList<String> produtosComprados = new ArrayList<>();
-
+    
     public Cliente(String nome, String cpf, String email) {
         this.setNome(nome);
         this.setCpf(cpf);
@@ -27,32 +25,39 @@ public class Cliente extends Pessoa {
         String novoCPF = scan.next();
         System.out.println("Qual o email do cliente (use o formato xxxx@xxxx.com");
         String novoEmail = scan.next();
+        Cliente clientenovo = new Cliente(novoNome, novoCPF, novoEmail);
         if (novoEmail.contains("@")) {
-                    Cliente clientenovo = new Cliente(novoNome, novoCPF, novoEmail);
-                    for (int i = 0 ; i <= clientes.size(); i++){
-                    if (clientes.contains(clientenovo.getNome())){
-                        System.out.println("Cliente ja existente");
-                    }else {
-                        clientes.add(clientenovo);
-                        System.out.println("Cliente adicionado");
-                        i = clientes.size() + 1;
-                    }}
-        }else{
+            boolean adicionar = true;
+
+            if (clientes.isEmpty()) {
+                clientes.add(clientenovo);
+                System.out.println("Cliente adicionado");
+                adicionar = false;
+            } else {
+                for (int i = 0; i < clientes.size(); i++) {
+                    if ((clientes.get(i).getNome().equals(novoNome)) || (clientes.get(i).getCpf().equals(novoCPF)) || (clientes.get(i).getEmail().equals(novoEmail))) {
+                        System.out.println("Dados ja existentes");
+                        adicionar = false;
+                        i = clientes.size();
+                    }
+                }
+            }
+            if (adicionar == true) {
+                clientes.add(clientenovo);
+                System.out.println("Cliente adicionado :2");
+            }
+            
+        } else {
             System.out.println("Email invalido");
         }
         System.out.println("_______________________________________________________________________");
 
-
-        }
-
-
-    @Override
-    public void listar(){
-        for (Cliente cliente : clientes) {
-            System.out.println("CLiente: " +cliente.getNome());
-        }
-
     }
+        @Override
+        public void listar () {
+            for (Cliente cliente : clientes) {
+                System.out.println("CLiente: " + cliente.getNome());
+            }
 
-
-}
+        }
+    }
