@@ -8,7 +8,10 @@ public class Organizacao {
 
         Cliente ClienteIncial = new Cliente(null, null, null);
 
+        ClienteIncial.listar();
         ClienteIncial.cadastrar();
+        ClienteIncial.cadastrar();
+
         ClienteIncial.listar();
 
 //    private Set<Venda> vendas = new HashSet<>();

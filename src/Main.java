@@ -18,7 +18,7 @@ public class Main {
             String opcao = input.next();
             switch (opcao) {
                 case "1":
-                    Cliente cliente = new Cliente();
+                    Cliente cliente = new Cliente(); //coloca o metodo adicionar cliente
             }
         }
         input.close();
