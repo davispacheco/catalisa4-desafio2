@@ -9,6 +9,7 @@ public class Organizacao {
         boolean repeticaoMenu = true;
         Scanner input = new Scanner(System.in);
         Cliente cliente = new Cliente(null, null, null); //coloca o metodo adicionar cliente
+
         while (repeticaoMenu) {
             System.out.println("O que deseja fazer?");
             System.out.println("1: Cadastrar cliente");
@@ -21,6 +22,7 @@ public class Organizacao {
             String opcao = input.next();
             switch (opcao) {
                 case "1":
+
                     cliente.cadastrar();
                 break;
                 case "2":
@@ -30,6 +32,7 @@ public class Organizacao {
                 case "4":
                     cliente.listar();
                     break;
+
             }
         }
         input.close();
