@@ -2,6 +2,8 @@ package src;
 
 public interface Acoes {
 
-    void cadastrar();
-    void listar();
+    void cadastrar(Organizacao organizacao);
+    void listar(Organizacao organizacao);
+
+
 }
