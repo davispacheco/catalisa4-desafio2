@@ -1,4 +1,5 @@
 package src;
 
-public class Vendedor {
+public class Vendedor extends Pessoa{
+
 }
