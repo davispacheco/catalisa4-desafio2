@@ -23,20 +23,24 @@ public class Cliente extends Pessoa{
     public void cadastrar(){
         System.out.println("Qual o nome do cliente?");
         String novoNome = scan.next();
-        System.out.println("Qual o CPF do cliente?");
-        String novoCPF = scan.next();
-        System.out.println("Qual o email do cliente (use o formato xxxx@xxxx.com");
-        String novoEmail = scan.next();
-        if (novoEmail.contains("@")){
-            Cliente novoCliente = new Cliente(novoNome, novoCPF, novoEmail);
-            clientes.add(novoCliente);
+        if (clientes.contains(novoNome)){
+            System.out.println("Cliente ja cadastrado");
+        } else {
+            System.out.println("Qual o CPF do cliente?");
+            String novoCPF = scan.next();
+            if (clientes.contains(novoCPF)){
+                System.out.println("CPF ja cadastrado");
+            } else {
+            System.out.println("Qual o email do cliente (use o formato xxxx@xxxx.com");
+            String novoEmail = scan.next();
+            if (novoEmail.contains("@") || clientes.contains(novoEmail)) {
+                clientes.add(new Cliente(novoNome, novoCPF, novoEmail));
+            } else {
+                System.out.println("Email invalido");
+            }
+        }}}
 
-        }else {
-            System.out.println("Email invalido");
-        }
 
-
-    }
     @Override
     public void listar(){
         for (Cliente cliente : clientes) {
