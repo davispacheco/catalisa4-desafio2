@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Cliente extends Pessoa{
+public class Cliente extends Pessoa {
 
 
     Scanner scan = new Scanner(System.in);
@@ -13,32 +13,37 @@ public class Cliente extends Pessoa{
     private ArrayList<String> produtosComprados = new ArrayList<>();
 
     public Cliente(String nome, String cpf, String email) {
-    this.setNome(nome);
-    this.setCpf(cpf);
-    this.setEmail(email);
+        this.setNome(nome);
+        this.setCpf(cpf);
+        this.setEmail(email);
     }
 
 
     @Override
-    public void cadastrar(){
+    public void cadastrar() {
         System.out.println("Qual o nome do cliente?");
         String novoNome = scan.next();
-        if (clientes.contains(novoNome)){
-            System.out.println("Cliente ja cadastrado");
-        } else {
-            System.out.println("Qual o CPF do cliente?");
-            String novoCPF = scan.next();
-            if (clientes.contains(novoCPF)){
-                System.out.println("CPF ja cadastrado");
-            } else {
-            System.out.println("Qual o email do cliente (use o formato xxxx@xxxx.com");
-            String novoEmail = scan.next();
-            if (novoEmail.contains("@") || clientes.contains(novoEmail)) {
-                clientes.add(new Cliente(novoNome, novoCPF, novoEmail));
-            } else {
-                System.out.println("Email invalido");
-            }
-        }}}
+        System.out.println("Qual o CPF do cliente?");
+        String novoCPF = scan.next();
+        System.out.println("Qual o email do cliente (use o formato xxxx@xxxx.com");
+        String novoEmail = scan.next();
+        if (novoEmail.contains("@")) {
+                    Cliente clientenovo = new Cliente(novoNome, novoCPF, novoEmail);
+                    for (int i = 0 ; i <= clientes.size(); i++){
+                    if (clientes.contains(clientenovo.getNome())){
+                        System.out.println("Cliente ja existente");
+                    }else {
+                        clientes.add(clientenovo);
+                        System.out.println("Cliente adicionado");
+                        i = clientes.size() + 1;
+                    }}
+        }else{
+            System.out.println("Email invalido");
+        }
+        System.out.println("_______________________________________________________________________");
+
+
+        }
 
 
     @Override
