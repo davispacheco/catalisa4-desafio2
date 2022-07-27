@@ -23,10 +23,10 @@ public class Organizacao {
                     cliente.cadastrar(); // Invoca o método da classe Cliente
                     break;
                 case "2":
-                    vendedor.cadastrar();
+           //        vendedor.cadastrar();
                     break;
                 case "3":
-
+                    vendedor.vender();
                     break;
                 case "4":
                     cliente.listar(); // Invoca o método listar da classe Cliente
@@ -41,7 +41,7 @@ public class Organizacao {
                     cliente.buscarCompras(); //Pesquisar compras do cliente
                     break;
                 case "8":
-//                    vendedor.buscarVendas(); //Pesquisar vendas do vendedor
+                    vendedor.listarVendas(); //Pesquisar vendas do vendedor
                 case "9":
                     System.out.println("Fim do programa!");
                     repeticaoMenu = false; // Encerra o laço de repetição
@@ -53,5 +53,7 @@ public class Organizacao {
             }
         }
         input.close();
+
+
     }
 }
