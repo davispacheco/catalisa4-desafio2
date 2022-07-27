@@ -16,16 +16,16 @@ public class Vendedor extends Pessoa {
     public void cadastrar() {
         System.out.println("Qual o nome do vendedor?");
         String nomeVend = scan.next();
-        System.out.println("Qual o CPF do cliente?");
+        System.out.println("Qual o CPF do vendedor?");
         String cpfVend = scan.next();
-        System.out.println("Qual o email do cliente (use o formato xxxx@xxxx.com");
+        System.out.println("Qual o email do vendedor (use o formato xxxx@xxxx.com");
         String emailVend = scan.next();
         Vendedor novoVendedor = new Vendedor(nomeVend, cpfVend, emailVend, null);
         if (emailVend.contains("@")) {
             boolean adicionar = true;
             if (vendedoresCadastrados.isEmpty()) {
                 System.out.println("Vendedor adicionado");
-                adicionar = true;
+                adicionar = false;
             } else {
                 for (int i = 0; i < vendedoresCadastrados.size(); i++) {
                     if ((vendedoresCadastrados.get(i).getNome().equals(nomeVend)) || (vendedoresCadastrados.get(i).getCpf().equals(cpfVend)) || (vendedoresCadastrados.get(i).getEmail().equals(emailVend))) {
@@ -34,6 +34,12 @@ public class Vendedor extends Pessoa {
                     adicionar = false;
                     i = vendedoresCadastrados.size();
                 }
+            }
+            if (adicionar == true) {
+                vendedoresCadastrados.add(novoVendedor);
+                System.out.println("Vendedor adicionado");
+            } else {
+                System.out.println("Email invalido");
             }
         }
 
