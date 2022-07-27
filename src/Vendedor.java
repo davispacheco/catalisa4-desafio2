@@ -14,7 +14,7 @@ public class Vendedor extends Pessoa {
         this.produtosVendidos = produtosVendidos;
     }
 
-    public Vendedor(String nome, String cpf, String email) {
+    public Vendedor(String nome, String cpf, String email, ArrayList produtosVendidos) {
         super(nome, cpf, email);
         this.vendedoresCadastrados = vendedoresCadastrados;
         this.produtosVendidos = produtosVendidos;
