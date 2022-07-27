@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Organizacao {
     public static void main(String[] args) {
         boolean repeticaoMenu = true;
-        Cliente cliente = new Cliente(); //Instancia o objeto inicial da classe Cliente
+        Cliente cliente = new Cliente(null, null, null, null); //Instancia o objeto inicial da classe Cliente
         Vendedor vendedor = new Vendedor(); //Instancia o objeto inicial da classe Vendedor
         Scanner input = new Scanner(System.in);
         while (repeticaoMenu) {
