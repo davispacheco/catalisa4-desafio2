@@ -36,7 +36,7 @@ public class Cliente extends Pessoa {
                 adicionar = false;
             } else {
                 for (int i = 0; i < clientes.size(); i++) {
-                    if ((clientes.get(i).getNome().equals(novoNome)) || (clientes.get(i).getCpf().equals(novoCPF)) || (clientes.get(i).getEmail().equals(novoEmail))) {
+                    if ((clientes.get(i).getCpf().equals(novoCPF)) || (clientes.get(i).getEmail().equals(novoEmail))) {
                         System.out.println("Dados ja existentes");
                         adicionar = false;
                         i = clientes.size();
