@@ -95,16 +95,11 @@ public class Vendedor extends Pessoa {
 
                 System.out.println("Qual vendedor realizou a venda? ");
                 System.out.println("Vendedores cadastrados: ");
-
-                for (int i = 0; i < vendedoresCadastrados.size(); i++) {
-                    System.out.println("Vendedor " + i + " - " + vendedoresCadastrados.get(i).getNome());
-                }
+                listar();
                 int vendedorEscolhido = input.nextInt();
-
 
                 if ((vendedorEscolhido >= 0) && (vendedorEscolhido <= vendedoresCadastrados.size())) {
 
-                    //escolha de clientes cadastrados
                     cliente.listar();
                     int clienteEscolhido = input.nextInt();
 
