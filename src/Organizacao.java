@@ -35,7 +35,7 @@ public class Organizacao {
                     vendedor.listar(); //Invoca o método listar da classe Vendedor
                     break;
                 case "6":
-                    //Invoca o método listar da classe Venda
+                    vendedor.vendasTotais();
                     break;
                 case "7":
                     cliente.buscarCompras(); //Pesquisar compras do cliente

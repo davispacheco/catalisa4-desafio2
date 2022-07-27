@@ -88,6 +88,15 @@ public class Vendedor extends Pessoa {
             System.out.println("Vendedor não encontrado");
         }
     }
+
+        public void vendasTotais(){
+            for (int i = 0; i < vendedoresCadastrados.size(); i++) {
+                for (int j = 0; j < vendedoresCadastrados.get(i).produtosVendidos.size(); j++) {
+                        System.out.println("Produto " +(vendedoresCadastrados.get(i).produtosVendidos.get(j)));
+                }
+
+                }
+        }
         public void vender (Cliente cliente) {
 
             if (vendedoresCadastrados.isEmpty() || cliente.getClientes().isEmpty()) {
