@@ -10,5 +10,7 @@ public class Vendedor extends Pessoa{
 
     }
     @Override
-    public void vender();
+    public void vender(){
+
+    }
 }
