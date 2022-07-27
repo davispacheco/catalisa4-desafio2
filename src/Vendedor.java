@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Vendedor extends Pessoa{
 
+    ArrayList<Vendedor> vendedoresCadastrados = new ArrayList<>();
     ArrayList<String> produtosVendidos = new ArrayList<>();
 
     public Vendedor(String nome, String cpf, String email, ArrayList produtosVendidos) {
