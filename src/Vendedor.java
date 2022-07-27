@@ -1,4 +1,5 @@
-import java.time.LocalDate;
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -73,14 +74,17 @@ public class Vendedor extends Pessoa {
 
         for (int i = 0; i < vendedoresCadastrados.size(); i++) {
             if (vendedoresCadastrados.get(i).getEmail().equals(emailVendedor)) {
-                for (int j = 0; j < produtosVendidos.size(); j++){
-                System.out.println(vendedoresCadastrados.get(i).produtosVendidos.get(j));
-                i = vendedoresCadastrados.size();
+                for (int j = 0; j < vendedoresCadastrados.get(i).produtosVendidos.size(); j++) {
+                    System.out.println("Produto " +(j+1) +": " +vendedoresCadastrados.get(i).produtosVendidos.get(j));
 
-            }aprovadorDeEmail++;
+
+                }
+                aprovadorDeEmail++;
+                break;
             }
-        }
-        if (aprovadorDeEmail != 1) {
+
+
+        }if (aprovadorDeEmail != 1) {
             System.out.println("Vendedor não encontrado");
         }
     }
@@ -105,6 +109,7 @@ public class Vendedor extends Pessoa {
                     if (clienteEscolhido >= 0 && (clienteEscolhido <= cliente.getClientes().size())){
 
                         while (compra == true) {
+                            System.out.println(" ");
                             System.out.println("Qual produto foi vendido? Segue as opções: ");
                             System.out.println("Digite 1 - Monitor");
                             System.out.println("Digite 2 - Notebbok");
@@ -119,28 +124,27 @@ public class Vendedor extends Pessoa {
                             switch (escolhaDoCliente) {
 
                                 case 1:
-////  ADICIONAR PRODUTOS NA LISTA DO CLIENTE
-                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Monitor, por R$ 600,00. Comprado no dia: " + LocalDate.now());
+                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Monitor, por R$ 600,00. Comprado no dia: " + LocalDateTime.now());
                                     break;
 
                                 case 2:
-                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Notebook, por R$ 3.000,00. Comprado no dia: " + LocalDate.now());
+                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Notebook, por R$ 3.000,00. Comprado no dia: " + LocalDateTime.now());
                                     break;
 
                                 case 3:
-                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Mouse, por R$ 50,00. Comprado no dia: " + LocalDate.now());
+                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Mouse, por R$ 50,00. Comprado no dia: " + LocalDateTime.now());
                                     break;
 
                                 case 4:
-                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Teclado, por R$ 90,00. Comprado no dia: " + LocalDate.now());
+                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Teclado, por R$ 90,00. Comprado no dia: " + LocalDateTime.now());
                                     break;
 
                                 case 5:
-                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Fone, por R$ 180,00. Comprado no dia: " + LocalDate.now());
+                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Fone, por R$ 180,00. Comprado no dia: " + LocalDateTime.now());
                                     break;
 
                                 case 6:
-                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Desktop, por R$ 2.400,00. Comprado no dia: " + LocalDate.now());
+                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Desktop, por R$ 2.400,00. Comprado no dia: " + LocalDateTime.now());
                                     break;
 
                                 case 7:
