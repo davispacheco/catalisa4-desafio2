@@ -1,6 +1,5 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Vendedor extends Pessoa {
@@ -13,7 +12,7 @@ public class Vendedor extends Pessoa {
     public Vendedor(String nome, String cpf, String email, ArrayList produtosVendidos) {
         super(nome, cpf, email);
         this.vendedoresCadastrados = vendedoresCadastrados;
-        this.produtosVendidos = produtosVendidos;
+
     }
 
     @Override
@@ -118,7 +117,7 @@ public class Vendedor extends Pessoa {
 
                                 case 1:
 
-
+                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Monitor, por R$ 600,00. Comprado no dia: " + LocalDate.now());
                                     break;
 
                                 case 2:
