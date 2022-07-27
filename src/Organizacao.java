@@ -38,10 +38,10 @@ public class Organizacao {
                      //Invoca o método listar da classe Venda
                     break;
                 case "7":
-                    //Pesquisar compras do cliente
+                    cliente.buscarCompras(); //Pesquisar compras do cliente
                     break;
                 case "8":
-                    //Pesquisar vendas do vendedor
+                    vendedor.buscarVendas(); //Pesquisar vendas do vendedor
                 case "9":
                     System.out.println("Fim do programa!");
                     repeticaoMenu = false; // Encerra o laço de repetição
