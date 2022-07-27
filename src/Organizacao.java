@@ -39,6 +39,10 @@ public class Organizacao {
                     System.out.println("Fim do programa!");
                     repeticaoMenu = false; // Encerra o laço de repetição
                     break;
+
+                default:
+                    System.out.println("Valor inválido");
+                    break;
             }
         }
         input.close();
