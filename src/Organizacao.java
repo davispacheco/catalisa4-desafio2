@@ -23,7 +23,7 @@ public class Organizacao {
                     cliente.cadastrar(); // Invoca o método da classe Cliente
                     break;
                 case "2":
-           //        vendedor.cadastrar();
+                   vendedor.cadastrar(); // Cadastrar vendedor
                     break;
                 case "3":
                     vendedor.vender();
