@@ -23,6 +23,7 @@ public class Vendedor extends Pessoa {
         Vendedor novoVendedor = new Vendedor(nomeVend, cpfVend, emailVend, null);
         if (emailVend.contains("@")) {
             boolean adicionar = true;
+
             if (vendedoresCadastrados.isEmpty()) {
                 System.out.println("Vendedor adicionado");
                 adicionar = true;
