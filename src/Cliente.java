@@ -90,4 +90,12 @@ public class Cliente extends Pessoa {
              System.out.println("Cliente não encontrado");
          }
     }
+
+    public ArrayList<Cliente> getClientes() {
+        return clientes;
+    }
+
+    public void setClientes(ArrayList<Cliente> clientes) {
+        this.clientes = clientes;
+    }
 }

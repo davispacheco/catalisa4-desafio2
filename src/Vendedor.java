@@ -88,68 +88,85 @@ public class Vendedor extends Pessoa {
         }
     }
         public void vender (Cliente cliente) {
-            boolean compra = true;
 
-            System.out.println("Qual vendedor realizou a venda? ");
-            System.out.println("Vendedores cadastrados: ");
+            if (vendedoresCadastrados.isEmpty() || cliente.getClientes().isEmpty()) {
 
-            for (int i = 0; i < vendedoresCadastrados.size(); i++) {
-                System.out.println("Vendedor " + i + " - " + vendedoresCadastrados.get(i).getNome());
-            }
-            int vendedorEscolhido = input.nextInt();
+                System.out.println("Você necessita adicionar primeiro os Clientes e Vendedores! ");
+            } else {
+
+                boolean compra = true;
+
+                System.out.println("Qual vendedor realizou a venda? ");
+                System.out.println("Vendedores cadastrados: ");
+
+                for (int i = 0; i < vendedoresCadastrados.size(); i++) {
+                    System.out.println("Vendedor " + i + " - " + vendedoresCadastrados.get(i).getNome());
+                }
+                int vendedorEscolhido = input.nextInt();
 
 
-            //escolha de clientes cadastrados
-            cliente.listar();
-            int clienteEscolhido = input.nextInt();
+                if ((vendedorEscolhido >= 0) && (vendedorEscolhido <= vendedoresCadastrados.size())) {
 
-            while (compra == true) {
-                System.out.println("Qual produto foi vendido? Segue as opções: ");
-                System.out.println("Digite 1 - Monitor");
-                System.out.println("Digite 2 - Notebbok");
-                System.out.println("Digite 3 - Mouse");
-                System.out.println("Digite 4 - Teclado");
-                System.out.println("Digite 5 - Fone");
-                System.out.println("Digite 6 - Desktop");
+                    //escolha de clientes cadastrados
+                    cliente.listar();
+                    int clienteEscolhido = input.nextInt();
 
-                int escolhaDoCliente = input.nextInt();
+                    if ((clienteEscolhido >= 0) && (clienteEscolhido <= cliente.tamanhoLista())) {
 
-                switch (escolhaDoCliente) {
+                        while (compra == true) {
+                            System.out.println("Qual produto foi vendido? Segue as opções: ");
+                            System.out.println("Digite 1 - Monitor");
+                            System.out.println("Digite 2 - Notebbok");
+                            System.out.println("Digite 3 - Mouse");
+                            System.out.println("Digite 4 - Teclado");
+                            System.out.println("Digite 5 - Fone");
+                            System.out.println("Digite 6 - Desktop");
 
-                    case 1:
-                        vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Monitor, por R$ 600,00. Comprado no dia: " + LocalDate.now());
-                        break;
+                            int escolhaDoCliente = input.nextInt();
 
-                    case 2:
-                        vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Notebook, por R$ 3.000,00. Comprado no dia: " + LocalDate.now());
-                        break;
+                            switch (escolhaDoCliente) {
 
-                    case 3:
-                        vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Mouse, por R$ 50,00. Comprado no dia: " + LocalDate.now());
-                        break;
+                                case 1:
+                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Monitor, por R$ 600,00. Comprado no dia: " + LocalDate.now());
+                                    break;
 
-                    case 4:
-                        vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Teclado, por R$ 90,00. Comprado no dia: " + LocalDate.now());
-                        break;
+                                case 2:
+                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Notebook, por R$ 3.000,00. Comprado no dia: " + LocalDate.now());
+                                    break;
 
-                    case 5:
-                        vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Fone, por R$ 180,00. Comprado no dia: " + LocalDate.now());
-                        break;
+                                case 3:
+                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Mouse, por R$ 50,00. Comprado no dia: " + LocalDate.now());
+                                    break;
 
-                    case 6:
-                        vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Desktop, por R$ 2.400,00. Comprado no dia: " + LocalDate.now());
-                        break;
+                                case 4:
+                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Teclado, por R$ 90,00. Comprado no dia: " + LocalDate.now());
+                                    break;
 
-                    case 7:
-                        compra = false;
-                        break;
+                                case 5:
+                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Fone, por R$ 180,00. Comprado no dia: " + LocalDate.now());
+                                    break;
 
-                    default:
-                        System.out.println("Escolha inválida");
+                                case 6:
+                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Desktop, por R$ 2.400,00. Comprado no dia: " + LocalDate.now());
+                                    break;
+
+                                case 7:
+                                    compra = false;
+                                    break;
+
+                                default:
+                                    System.out.println("Escolha inválida");
+                            }
+                        }
+
+                    } else {
+                        System.out.println("Escolha Inválida!");
+                    }
+                } else {
+                    System.out.println("Escolha Inválida!");
                 }
             }
         }
-
 
     }
 
