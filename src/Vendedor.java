@@ -48,7 +48,18 @@ public class Vendedor extends Pessoa {
 
     @Override
     public void listar() {
+        System.out.println("____________________________________________");
+        System.out.println("--> Vendedores cadastrados:" + vendedoresCadastrados.size());
+        System.out.println("____________________________________________");
+        for (Vendedor vendedor : vendedoresCadastrados) {
+            System.out.println("");
+            System.out.println("-> Nome do vendedor: " + vendedor.getNome());
+            System.out.println("-> CPF do vendedor " + vendedor.getCpf());
+            System.out.println("-> |E-mail do vendedor: " + vendedor.getEmail());
+            System.out.println("--------------------------------------------");
 
+
+        }
     }
 
     public void listarVendas () {
