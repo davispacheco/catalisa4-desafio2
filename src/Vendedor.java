@@ -6,7 +6,7 @@ public class Vendedor extends Pessoa{
 
     ArrayList<String> produtosVendidos = new ArrayList<>();
 
-    public Vendedor(String nome, String cpf, String email) {
+    public Vendedor(String nome, String cpf, String email, ArrayList produtosVendidos) {
         super(nome, cpf, email);
     }
 
