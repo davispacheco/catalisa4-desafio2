@@ -58,14 +58,14 @@ public class Vendedor extends Pessoa {
         for (int i = 0; i < vendedoresCadastrados.size(); i++) {
             System.out.println("                  VENDEDOR " +i +"          ");
             System.out.println("-> Nome do vendedor: " + vendedoresCadastrados.get(i).getNome());
-            System.out.println("-> CPF do vendedor " + vendedoresCadastrados.get(i).getNome());
-            System.out.println("-> |E-mail do vendedor: " + vendedoresCadastrados.get(i).getNome());
+            System.out.println("-> CPF do vendedor " + vendedoresCadastrados.get(i).getCpf());
+            System.out.println("-> E-mail do vendedor: " + vendedoresCadastrados.get(i).getEmail());
             System.out.println("--------------------------------------------");
 
         }
     }
 
-    public void listarVendasPorCPF() {
+    public void listarVendasPorEmail() {
         System.out.println("Deseja ver as vendas de qual vendedor?");
         System.out.println("Digite o email:");
         String emailVendedor = input.next();
@@ -73,9 +73,11 @@ public class Vendedor extends Pessoa {
 
         for (int i = 0; i < vendedoresCadastrados.size(); i++) {
             if (vendedoresCadastrados.get(i).getEmail().equals(emailVendedor)) {
-                System.out.println(vendedoresCadastrados.get(i).produtosVendidos);
+                for (int j = 0; j < produtosVendidos.size(); j++){
+                System.out.println(vendedoresCadastrados.get(i).produtosVendidos.get(j));
                 i = vendedoresCadastrados.size();
-                aprovadorDeEmail++;
+
+            }aprovadorDeEmail++;
             }
         }
         if (aprovadorDeEmail != 1) {

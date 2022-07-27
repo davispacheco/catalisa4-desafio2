@@ -41,7 +41,7 @@ public class Organizacao {
                     cliente.buscarCompras(); //Pesquisar compras do cliente
                     break;
                 case "8":
-                    vendedor.listarVendasPorCPF(); //Pesquisar vendas do vendedor
+                    vendedor.listarVendasPorEmail(); //Pesquisar vendas do vendedor
                     break;
                 case "9":
                     System.out.println("Fim do programa!");
