@@ -47,11 +47,9 @@ public class Vendedor extends Pessoa {
             if (adicionar == false) {
                 vendedoresCadastrados.add(novoVendedor);
                 System.out.println("Vendedor adicionado");
-            } else {
+            }} else {
                 System.out.println("Email invalido");
             }
-        }
-
         }
 
     @Override
@@ -59,13 +57,12 @@ public class Vendedor extends Pessoa {
         System.out.println("____________________________________________");
         System.out.println("--> Vendedores cadastrados:" + vendedoresCadastrados.size());
         System.out.println("____________________________________________");
-        for (Vendedor vendedor : vendedoresCadastrados) {
-            System.out.println("");
-            System.out.println("-> Nome do vendedor: " + vendedor.getNome());
-            System.out.println("-> CPF do vendedor " + vendedor.getCpf());
-            System.out.println("-> |E-mail do vendedor: " + vendedor.getEmail());
+        for (int i = 0; i <= vendedoresCadastrados.size(); i++) {
+            System.out.println("                  VENDEDOR" +i +"          ");
+            System.out.println("-> Nome do vendedor: " + vendedoresCadastrados.get(i).getNome());
+            System.out.println("-> CPF do vendedor " + vendedoresCadastrados.get(i).getNome());
+            System.out.println("-> |E-mail do vendedor: " + vendedoresCadastrados.get(i).getNome());
             System.out.println("--------------------------------------------");
-
 
         }
     }
