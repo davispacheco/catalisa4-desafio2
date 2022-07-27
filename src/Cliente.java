@@ -53,10 +53,6 @@ public class Cliente extends Pessoa {
 
 
     }
-    public int tamanhoLista(){
-
-        return clientes.size();
-    }
 
     @Override
     public void listar() {

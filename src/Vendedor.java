@@ -8,11 +8,6 @@ public class Vendedor extends Pessoa {
     ArrayList<String> produtosVendidos = new ArrayList<>();
     Scanner input = new Scanner(System.in);
 
-    public Vendedor() {
-        super();
-        this.vendedoresCadastrados = vendedoresCadastrados;
-        this.produtosVendidos = produtosVendidos;
-    }
 
     public Vendedor(String nome, String cpf, String email, ArrayList produtosVendidos) {
         super(nome, cpf, email);
@@ -29,6 +24,7 @@ public class Vendedor extends Pessoa {
         System.out.println("Qual o email do vendedor (use o formato xxxx@xxxx.com");
         String emailVend = scan.next();
         Vendedor novoVendedor = new Vendedor(nomeVend, cpfVend, emailVend, null);
+
         if (emailVend.contains("@")) {
             boolean adicionar = true;
 
@@ -37,17 +33,19 @@ public class Vendedor extends Pessoa {
                 adicionar = false;
             } else {
                 for (int i = 0; i < vendedoresCadastrados.size(); i++) {
-                    if ((vendedoresCadastrados.get(i).getNome().equals(nomeVend)) || (vendedoresCadastrados.get(i).getCpf().equals(cpfVend)) || (vendedoresCadastrados.get(i).getEmail().equals(emailVend))) {
+                    if ((vendedoresCadastrados.get(i).getCpf().equals(cpfVend)) || (vendedoresCadastrados.get(i).getEmail().equals(emailVend))) {
+                        System.out.println("Vendedor já cadastrado");
+                     i = vendedoresCadastrados.size();
+                }else {
+                        adicionar = false;
                     }
-                    System.out.println("Vendedor já cadastrado");
-                    adicionar = false;
-                    i = vendedoresCadastrados.size();
-                }
-            }
+
+            }}
             if (adicionar == false) {
                 vendedoresCadastrados.add(novoVendedor);
                 System.out.println("Vendedor adicionado");
-            }} else {
+            }
+        } else {
                 System.out.println("Email invalido");
             }
         }
@@ -103,7 +101,7 @@ public class Vendedor extends Pessoa {
                     cliente.listar();
                     int clienteEscolhido = input.nextInt();
 
-                    if (clienteEscolhido >= 0 && (clienteEscolhido <= cliente.getClientes().size()){
+                    if (clienteEscolhido >= 0 && (clienteEscolhido <= cliente.getClientes().size())){
 
                         while (compra == true) {
                             System.out.println("Qual produto foi vendido? Segue as opções: ");
@@ -119,6 +117,7 @@ public class Vendedor extends Pessoa {
                             switch (escolhaDoCliente) {
 
                                 case 1:
+
                                     vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Monitor, por R$ 600,00. Comprado no dia: " + LocalDate.now());
                                     break;
 
