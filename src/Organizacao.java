@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Organizacao {
     public static void main(String[] args) {
         boolean repeticaoMenu = true;
@@ -7,6 +6,7 @@ public class Organizacao {
         Vendedor vendedor = new Vendedor(null, null, null, null); //Instancia o objeto inicial da classe Vendedor
         Scanner input = new Scanner(System.in);
         while (repeticaoMenu) {
+            System.out.println("");
             System.out.println("O que deseja fazer?");
             System.out.println("1: Cadastrar cliente");
             System.out.println("2: Cadastrar vendedor");
