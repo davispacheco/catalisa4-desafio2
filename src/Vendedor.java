@@ -21,7 +21,7 @@ public class Vendedor extends Pessoa{
 
     }
 
-    public void vender(){            // O cliente compra
+    public void vender(){
 
         Scanner input = new Scanner(System.in);
 
@@ -34,6 +34,8 @@ public class Vendedor extends Pessoa{
             System.out.println("Vendedor " + i + " - " + vendedoresCadastrados.get(i).getNome());
         }
         int vendedorEscolhido = input.nextInt();
+
+        //escolha de clientes cadastrados
 
         while(compra == true){
             System.out.println("Qual produto foi vendido? Segue as opções: ");
