@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Vendedor extends Pessoa {
@@ -29,7 +30,6 @@ public class Vendedor extends Pessoa {
             boolean adicionar = true;
 
             if (vendedoresCadastrados.isEmpty()) {
-                System.out.println("Vendedor adicionado");
                 adicionar = false;
             } else {
                 for (int i = 0; i < vendedoresCadastrados.size(); i++) {
@@ -55,8 +55,9 @@ public class Vendedor extends Pessoa {
         System.out.println("____________________________________________");
         System.out.println("--> Vendedores cadastrados:" + vendedoresCadastrados.size());
         System.out.println("____________________________________________");
-        for (int i = 0; i <= vendedoresCadastrados.size(); i++) {
-            System.out.println("                  VENDEDOR" +i +"          ");
+
+        for (int i = 0; i < vendedoresCadastrados.size(); i++) {
+            System.out.println("                  VENDEDOR " +i +"          ");
             System.out.println("-> Nome do vendedor: " + vendedoresCadastrados.get(i).getNome());
             System.out.println("-> CPF do vendedor " + vendedoresCadastrados.get(i).getNome());
             System.out.println("-> |E-mail do vendedor: " + vendedoresCadastrados.get(i).getNome());
@@ -85,15 +86,14 @@ public class Vendedor extends Pessoa {
         public void vender (Cliente cliente) {
 
             if (vendedoresCadastrados.isEmpty() || cliente.getClientes().isEmpty()) {
-
                 System.out.println("Você necessita adicionar primeiro os Clientes e Vendedores! ");
             } else {
-
                 boolean compra = true;
 
                 System.out.println("Qual vendedor realizou a venda? ");
                 System.out.println("Vendedores cadastrados: ");
                 listar();
+
                 int vendedorEscolhido = input.nextInt();
 
                 if ((vendedorEscolhido >= 0) && (vendedorEscolhido <= vendedoresCadastrados.size())) {
@@ -118,7 +118,7 @@ public class Vendedor extends Pessoa {
 
                                 case 1:
 
-                                    vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Monitor, por R$ 600,00. Comprado no dia: " + LocalDate.now());
+
                                     break;
 
                                 case 2:
