@@ -6,6 +6,10 @@ public class Vendedor extends Pessoa{
 
     ArrayList<String> produtosVendidos = new ArrayList<>();
 
+    public Vendedor(String nome, String cpf, String email) {
+        super(nome, cpf, email);
+    }
+
     @Override
     public void cadastrar() {
 

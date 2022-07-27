@@ -1,5 +1,4 @@
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,11 +7,8 @@ public class Cliente extends Pessoa {
     private ArrayList<String> produtosComprados = new ArrayList<>();
     Scanner scan = new Scanner(System.in);
 
-
-    public Cliente(String nome, String cpf, String email,ArrayList produtosComprados) {
-        this.setNome(nome);
-        this.setCpf(cpf);
-        this.setEmail(email);
+    public Cliente(String nome, String cpf, String email, ArrayList produtosComprados) {
+        super(nome, cpf, email);
         this.produtosComprados = produtosComprados;
     }
 
