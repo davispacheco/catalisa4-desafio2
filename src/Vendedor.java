@@ -19,7 +19,7 @@ public class Vendedor extends Pessoa{
     public void listar() {
 
     }
-    @Override
+
     public void vender(){            // O cliente compra
 
         Scanner input = new Scanner(System.in);
