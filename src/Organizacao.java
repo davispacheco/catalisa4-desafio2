@@ -26,7 +26,7 @@ public class Organizacao {
                    vendedor.cadastrar(); // Cadastrar vendedor
                     break;
                 case "3":
-                    vendedor.vender();
+                  //  vendedor.vender(Cliente cliente);
                     break;
                 case "4":
                     cliente.listar(); // Invoca o método listar da classe Cliente

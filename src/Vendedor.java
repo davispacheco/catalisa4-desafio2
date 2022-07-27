@@ -79,7 +79,7 @@ public class Vendedor extends Pessoa {
             System.out.println("Vendedor não encontrado");
         }
     }
-        public void vender () {
+        public void vender (Cliente cliente) {
             boolean compra = true;
 
             System.out.println("Qual vendedor realizou a venda? ");
@@ -90,6 +90,7 @@ public class Vendedor extends Pessoa {
             }
             int vendedorEscolhido = input.nextInt();
 
+            cliente.listar();
             //escolha de clientes cadastrados
 
             while (compra == true) {
