@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -103,27 +105,27 @@ public class Cliente extends Pessoa {
             switch (escolhaDoCliente){
 
                 case 1:
-                    compra.monitor;
+                    produtosComprados.add("Monitor, por R$ 600,00. Comprado no dia: " + LocalDate.now());
                     break;
 
                 case 2:
-                    compra.notebook;
+                    produtosComprados.add("Notebook, por R$ 3.000,00. Comprado no dia: " + LocalDate.now());
                     break;
 
                 case 3:
-                    compra.mouse;
+                    produtosComprados.add("Mouse, por R$ 50,00. Comprado no dia: " + LocalDate.now());
                     break;
 
                 case 4:
-                    compra.teclado;
+                    produtosComprados.add("Teclado, por R$ 90,00. Comprado no dia: " + LocalDate.now());
                     break;
 
                 case 5:
-                    compra.fone;
+                    produtosComprados.add("Fone, por R$ 180,00. Comprado no dia: " + LocalDate.now());
                     break;
 
                 case 6:
-                    compra.desktop;
+                    produtosComprados.add("Desktop, por R$ 2.400,00. Comprado no dia: " + LocalDate.now());
                     break;
 
                 case 7:
