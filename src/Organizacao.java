@@ -4,7 +4,6 @@ public class Organizacao {
     public static void main(String[] args) {
         boolean repeticaoMenu = true;
         Cliente cliente = new Cliente(); //Instancia o objeto inicial da classe Cliente
-        Venda venda = new Venda(); //Instancia o objeto inicial da classe Venda
         Vendedor vendedor = new Vendedor(); //Instancia o objeto inicial da classe Vendedor
         Scanner input = new Scanner(System.in);
         while (repeticaoMenu) {
