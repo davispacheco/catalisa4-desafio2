@@ -44,7 +44,7 @@ public class Vendedor extends Pessoa {
                     i = vendedoresCadastrados.size();
                 }
             }
-            if (adicionar == true) {
+            if (adicionar == false) {
                 vendedoresCadastrados.add(novoVendedor);
                 System.out.println("Vendedor adicionado");
             } else {
