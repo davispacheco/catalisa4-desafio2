@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Organização {
+public class Organizacao {
     public static void main(String[] args) {
         boolean repeticaoMenu = true;
         Cliente cliente = new Cliente(); //Instancia o objeto inicial da classe Cliente
