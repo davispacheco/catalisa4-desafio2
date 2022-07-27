@@ -90,8 +90,11 @@ public class Vendedor extends Pessoa {
             }
             int vendedorEscolhido = input.nextInt();
 
-            cliente.listar();
+
             //escolha de clientes cadastrados
+            cliente.listar();
+
+            int clienteEscolhido = input.nextInt();
 
             while (compra == true) {
                 System.out.println("Qual produto foi vendido? Segue as opções: ");
