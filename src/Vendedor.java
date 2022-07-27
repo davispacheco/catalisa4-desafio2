@@ -6,6 +6,7 @@ public class Vendedor extends Pessoa{
 
     ArrayList<Vendedor> vendedoresCadastrados = new ArrayList<>();
     ArrayList<String> produtosVendidos = new ArrayList<>();
+    Scanner input = new Scanner(System.in);
 
     public Vendedor(String nome, String cpf, String email, ArrayList produtosVendidos) {
         super(nome, cpf, email);
@@ -21,10 +22,25 @@ public class Vendedor extends Pessoa{
 
     }
 
+    public void listarVendas(){
+        System.out.println("Deseja ver as vendas de qual vendedor?");
+        System.out.println("Digite o email:");
+        String emailVendedor = input.next();
+        System.out.println("Digite o CPF do cliente que deseja buscar: ");
+        int aprovadorDeEmail = 0;
+        for (int i = 0; i < vendedoresCadastrados.size(); i++) {
+            if (vendedoresCadastrados.get(i).getCpf().equals(emailVendedor)) {
+                System.out.println(vendedoresCadastrados.get(i).produtosVendidos);
+                i = vendedoresCadastrados.size();
+                aprovadorDeEmail++;
+            }
+        }
+        if (aprovadorDeEmail != 1){
+            System.out.println("Vendedor não encontrado");
+        }
+    }
+
     public void vender(){
-
-        Scanner input = new Scanner(System.in);
-
         boolean compra = true;
 
         System.out.println("Qual vendedor realizou a venda? ");

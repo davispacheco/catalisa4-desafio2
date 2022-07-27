@@ -26,7 +26,7 @@ public class Organizacao {
                     vendedor.cadastrar();
                     break;
                 case "3":
-
+                    vendedor.vender();
                     break;
                 case "4":
                     cliente.listar(); // Invoca o método listar da classe Cliente
@@ -53,5 +53,7 @@ public class Organizacao {
             }
         }
         input.close();
+
+
     }
 }
