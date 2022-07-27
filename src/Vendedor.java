@@ -99,8 +99,11 @@ public class Vendedor extends Pessoa {
         }
         public void vender (Cliente cliente) {
 
-            if (vendedoresCadastrados.isEmpty() || cliente.getClientes().isEmpty()) {
-                System.out.println("Você necessita adicionar primeiro os Clientes e Vendedores! ");
+            if (vendedoresCadastrados.isEmpty()) {
+                System.out.println("Você precisa adicionar primeiro os Vendedores! ");
+            } else if (cliente.getClientes().isEmpty()) {
+                System.out.println("Você precisa adcionar primeiro os Clientes");
+
             } else {
                 boolean compra = true;
 
