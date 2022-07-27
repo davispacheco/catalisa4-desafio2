@@ -9,4 +9,6 @@ public class Vendedor extends Pessoa{
     public void listar() {
 
     }
+    @Override
+    public void vender();
 }

@@ -1,4 +1,4 @@
-public abstract class Pessoa implements Acoes{
+public abstract class Pessoa implements Vendas{
     private String nome;
     private String cpf;
     private String email;
