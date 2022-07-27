@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class Cliente extends Pessoa {
     private ArrayList<Cliente> clientes = new ArrayList<>();
     private ArrayList<String> produtosComprados = new ArrayList<>();
+    Scanner scan = new Scanner(System.in);
+
 
     public Cliente(String nome, String cpf, String email,ArrayList produtosComprados) {
         this.setNome(nome);
@@ -14,7 +16,7 @@ public class Cliente extends Pessoa {
 
     @Override
     public void cadastrar() {
-        Scanner scan = new Scanner(System.in);
+
         System.out.println("Qual o nome do cliente?");
         String novoNome = scan.next();
         System.out.println("Qual o CPF do cliente?");
@@ -63,7 +65,16 @@ public class Cliente extends Pessoa {
         }
 
     }
-
+     public void buscarCompras(){
+         System.out.println("Digite o CPF do cliente que deseja buscar: ");
+         String pesquisaCPF = scan.next();
+         for (int i = 0; i < clientes.size(); i++) {
+             if (clientes.get(i).getCpf().equals(pesquisaCPF)) {
+                 System.out.println(clientes.get(i).produtosComprados);
+             } else{
+                 System.out.println("Cliente não encontrado");
+             }
+     }}
     @Override
     public void vender(){            // O cliente compra
         System.out.println("");
