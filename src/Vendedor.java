@@ -65,7 +65,7 @@ public class Vendedor extends Pessoa {
         }
     }
 
-    public void listarVendas () {
+    public void listarVendasPorCPF() {
         System.out.println("Deseja ver as vendas de qual vendedor?");
         System.out.println("Digite o email:");
         String emailVendedor = input.next();
