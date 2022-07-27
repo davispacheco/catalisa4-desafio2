@@ -16,9 +16,9 @@ public class Vendedor extends Pessoa {
     public void cadastrar() {
         System.out.println("Qual o nome do vendedor?");
         String nomeVend = scan.next();
-        System.out.println("Qual o CPF do cliente?");
+        System.out.println("Qual o CPF do vendedor?");
         String cpfVend = scan.next();
-        System.out.println("Qual o email do cliente (use o formato xxxx@xxxx.com");
+        System.out.println("Qual o email do vendedor (use o formato xxxx@xxxx.com");
         String emailVend = scan.next();
         Vendedor novoVendedor = new Vendedor(nomeVend, cpfVend, emailVend, null);
         if (emailVend.contains("@")) {
@@ -35,11 +35,34 @@ public class Vendedor extends Pessoa {
                     i = vendedoresCadastrados.size();
                 }
             }
-        }
+            if (adicionar == true) {
+                vendedoresCadastrados.add(novoVendedor);
+                System.out.println("Vendedor  adicionado");
+            } else {
+                System.out.println("Email invalido");
+            }
+
 
         }
 
-        public void listarVendas () {
+        }
+    @Override
+    public void listar() {
+        System.out.println("");
+        System.out.println("____________________________________________");
+        System.out.println("--> Vendedores cadastrados:" + vendedoresCadastrados.size());
+        System.out.println("____________________________________________");
+        for (Vendedor vendedor : vendedoresCadastrados) {
+            System.out.println("");
+            System.out.println("-> Nome do vendedor " + vendedor.getNome());
+            System.out.println("-> CPF do vendedor: " + vendedor.getCpf());
+            System.out.println("-> |E-mail do vendedor: " + vendedor.getEmail());
+            System.out.println("--------------------------------------------");
+            System.out.println("");
+        }
+    }
+
+    public void listarVendas () {
             System.out.println("Deseja ver as vendas de qual vendedor?");
             System.out.println("Digite o email:");
             String emailVendedor = input.next();
@@ -56,10 +79,7 @@ public class Vendedor extends Pessoa {
                 System.out.println("Vendedor não encontrado");
             }
         }
-    @Override
-    public void listar() {
 
-    }
         public void vender () {
             boolean compra = true;
 
