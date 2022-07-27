@@ -36,7 +36,7 @@ public class Cliente extends Pessoa {
                 adicionar = false;
             } else {
                 for (int i = 0; i < clientes.size(); i++) {
-                    if ((clientes.get(i).getNome().equals(novoNome)) || (clientes.get(i).getCpf().equals(novoCPF)) || (clientes.get(i).getEmail().equals(novoEmail))) {
+                    if ((clientes.get(i).getCpf().equals(novoCPF)) || (clientes.get(i).getEmail().equals(novoEmail))) {
                         System.out.println("Dados ja existentes");
                         adicionar = false;
                         i = clientes.size();
@@ -57,15 +57,16 @@ public class Cliente extends Pessoa {
     @Override
     public void listar() {
         System.out.println("");
-            System.out.println("____________________________________________");
+            System.out.println("_____________________________________________________");
             System.out.println("--> Clientes cadastrados:" + clientes.size());
-            System.out.println("____________________________________________");
-        for (Cliente cliente : clientes) {
+            System.out.println("_____________________________________________________");
+        for (int i = 0; i < clientes.size(); i++) {
             System.out.println("");
-            System.out.println("-> Nome do cliente: " + cliente.getNome());
-            System.out.println("-> CPF do cliente: " + cliente.getCpf());
-            System.out.println("-> |E-mail do cliente: " + cliente.getEmail());
-            System.out.println("--------------------------------------------");
+            System.out.println("                   " +i +"                           ");
+            System.out.println("-> Nome do cliente: " + clientes.get(i).getNome());
+            System.out.println("-> CPF do cliente: " + clientes.get(i).getCpf());
+            System.out.println("-> |E-mail do cliente: " + clientes.get(i).getEmail());
+            System.out.println("-----------------------------------------------------");
             System.out.println("");
         }
 

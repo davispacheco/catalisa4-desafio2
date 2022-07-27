@@ -24,16 +24,17 @@ public class Vendedor extends Pessoa {
     public void cadastrar() {
         System.out.println("Qual o nome do vendedor?");
         String nomeVend = scan.next();
-        System.out.println("Qual o CPF do cliente?");
+        System.out.println("Qual o CPF do vendedor?");
         String cpfVend = scan.next();
-        System.out.println("Qual o email do cliente (use o formato xxxx@xxxx.com");
+        System.out.println("Qual o email do vendedor (use o formato xxxx@xxxx.com");
         String emailVend = scan.next();
         Vendedor novoVendedor = new Vendedor(nomeVend, cpfVend, emailVend, null);
         if (emailVend.contains("@")) {
             boolean adicionar = true;
+
             if (vendedoresCadastrados.isEmpty()) {
                 System.out.println("Vendedor adicionado");
-                adicionar = true;
+                adicionar = false;
             } else {
                 for (int i = 0; i < vendedoresCadastrados.size(); i++) {
                     if ((vendedoresCadastrados.get(i).getNome().equals(nomeVend)) || (vendedoresCadastrados.get(i).getCpf().equals(cpfVend)) || (vendedoresCadastrados.get(i).getEmail().equals(emailVend))) {
@@ -43,13 +44,30 @@ public class Vendedor extends Pessoa {
                     i = vendedoresCadastrados.size();
                 }
             }
+            if (adicionar == true) {
+                vendedoresCadastrados.add(novoVendedor);
+                System.out.println("Vendedor adicionado");
+            } else {
+                System.out.println("Email invalido");
+            }
         }
 
         }
 
     @Override
     public void listar() {
+        System.out.println("____________________________________________");
+        System.out.println("--> Vendedores cadastrados:" + vendedoresCadastrados.size());
+        System.out.println("____________________________________________");
+        for (Vendedor vendedor : vendedoresCadastrados) {
+            System.out.println("");
+            System.out.println("-> Nome do vendedor: " + vendedor.getNome());
+            System.out.println("-> CPF do vendedor " + vendedor.getCpf());
+            System.out.println("-> |E-mail do vendedor: " + vendedor.getEmail());
+            System.out.println("--------------------------------------------");
 
+
+        }
     }
 
     public void listarVendas () {
@@ -69,7 +87,7 @@ public class Vendedor extends Pessoa {
             System.out.println("Vendedor não encontrado");
         }
     }
-        public void vender () {
+        public void vender (Cliente cliente) {
             boolean compra = true;
 
             System.out.println("Qual vendedor realizou a venda? ");
@@ -80,7 +98,11 @@ public class Vendedor extends Pessoa {
             }
             int vendedorEscolhido = input.nextInt();
 
+
             //escolha de clientes cadastrados
+            cliente.listar();
+
+            int clienteEscolhido = input.nextInt();
 
             while (compra == true) {
                 System.out.println("Qual produto foi vendido? Segue as opções: ");
