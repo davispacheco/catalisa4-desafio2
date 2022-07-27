@@ -58,11 +58,15 @@ public class Cliente extends Pessoa {
 
     @Override
     public void listar() {
-        System.out.println("Clientes cadastrados: " + clientes.size());
+        System.out.println("");
+            System.out.println("__________________________________________");
+            System.out.println("|Clientes cadastrados:" + clientes.size()    +"                  |");
         for (Cliente cliente : clientes) {
-            System.out.println("Nome do cliente: " + cliente.getNome());
-            System.out.println("CPF do cliente: " + cliente.getCpf());
-            System.out.println("E-mail do cliente: " + cliente.getEmail());
+            System.out.println("|Nome do cliente:" + cliente.getNome()  +"                       |");
+            System.out.println("|CPF do cliente" + cliente.getCpf()   +"                         |");
+            System.out.println("|E-mail do cliente:" + cliente.getEmail() +"                     |");
+            System.out.println("------------------------------------------");
+            System.out.println("");
         }
 
     }
