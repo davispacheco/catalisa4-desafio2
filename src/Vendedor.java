@@ -28,7 +28,7 @@ public class Vendedor extends Pessoa {
         String cpfVend = scan.next();
         System.out.println("Qual o email do vendedor (use o formato xxxx@xxxx.com");
         String emailVend = scan.next();
-        Vendedor novoVendedor = new Vendedor(nomeVend, cpfVend, emailVend, null);
+        Vendedor novoVendedor = new Vendedor(nomeVend, cpfVend, emailVend);
         if (emailVend.contains("@")) {
             boolean adicionar = true;
 
