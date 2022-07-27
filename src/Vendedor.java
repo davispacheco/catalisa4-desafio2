@@ -93,7 +93,6 @@ public class Vendedor extends Pessoa {
 
             //escolha de clientes cadastrados
             cliente.listar();
-
             int clienteEscolhido = input.nextInt();
 
             while (compra == true) {
