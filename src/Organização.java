@@ -25,7 +25,7 @@ public class Organização {
                     vendedor.cadastrar();
                     break;
                 case "3":
-                    venda.cadastrar();
+
                     break;
                 case "4":
                     cliente.listar(); // Invoca o método listar da classe Cliente
@@ -34,7 +34,7 @@ public class Organização {
                     vendedor.listar(); //Invoca o método listar da classe Vendedor
                     break;
                 case "6":
-                    venda.listar(); //Invoca o método listar da classe Venda
+                     //Invoca o método listar da classe Venda
                     break;
                 case "7":
                     System.out.println("Fim do programa!");
