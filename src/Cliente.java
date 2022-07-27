@@ -66,6 +66,55 @@ public class Cliente extends Pessoa {
 
     @Override
     public void vender(){            // O cliente compra
-        System.out.println("");
+
+        Scanner input = new Scanner(System.in);
+
+        boolean compra = true;
+
+        while(compra == true){
+            System.out.println("Qual produto deseja comprar? Segue as opções: ");
+            System.out.println("Digite 1 - Monitor");
+            System.out.println("Digite 2 - Notebbok");
+            System.out.println("Digite 3 - Mouse");
+            System.out.println("Digite 4 - Teclado");
+            System.out.println("Digite 5 - Fone");
+            System.out.println("Digite 6 - Desktop");
+
+            int escolhaDoCliente = input.nextInt();
+
+            switch (escolhaDoCliente){
+
+                case 1:
+                    compra.monitor;
+                    break;
+
+                case 2:
+                    compra.notebook;
+                    break;
+
+                case 3:
+                    compra.mouse;
+                    break;
+
+                case 4:
+                    compra.teclado;
+                    break;
+
+                case 5:
+                    compra.fone;
+                    break;
+
+                case 6:
+                    compra.desktop;
+                    break;
+
+                case 7:
+                    compra = false;
+                    break;
+
+                default:
+                    System.out.println("Escolha inválida");
+            }
+        }
     }
 }
