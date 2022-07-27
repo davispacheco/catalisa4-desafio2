@@ -75,13 +75,19 @@ public class Cliente extends Pessoa {
          System.out.println("Digite o CPF do cliente que deseja buscar: ");
          String pesquisaCPF = scan.next();
          int aprovadorDeCPF = 0;
-         for (int i = 0; i < clientes.size(); i++) {
+
+         for (int i = 0; i < produtosComprados.size(); i++) {
              if (clientes.get(i).getCpf().equals(pesquisaCPF)) {
-                 System.out.println(clientes.get(i).produtosComprados);
-                 i = clientes.size();
-                aprovadorDeCPF++;
+                 for (int j = 0; j < clientes.get(i).produtosComprados.size(); j++) {
+                     System.out.println("Produto " +(j+1) +": " +clientes.get(i).produtosComprados.get(j));
+
+
+                 }
+                 aprovadorDeCPF++;
+                 break;
              }
-     }
+             }
+
          if (aprovadorDeCPF != 1){
              System.out.println("Cliente não encontrado");
          }

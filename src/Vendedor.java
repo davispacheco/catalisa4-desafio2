@@ -102,7 +102,6 @@ public class Vendedor extends Pessoa {
                 int vendedorEscolhido = input.nextInt();
 
                 if ((vendedorEscolhido >= 0) && (vendedorEscolhido <= vendedoresCadastrados.size())) {
-
                     cliente.listar();
                     int clienteEscolhido = input.nextInt();
 
