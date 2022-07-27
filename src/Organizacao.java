@@ -42,6 +42,7 @@ public class Organizacao {
                     break;
                 case "8":
                     vendedor.listarVendas(); //Pesquisar vendas do vendedor
+                    break;
                 case "9":
                     System.out.println("Fim do programa!");
                     repeticaoMenu = false; // Encerra o laço de repetição

@@ -69,10 +69,10 @@ public class Vendedor extends Pessoa {
         System.out.println("Deseja ver as vendas de qual vendedor?");
         System.out.println("Digite o email:");
         String emailVendedor = input.next();
-        System.out.println("Digite o CPF do cliente que deseja buscar: ");
         int aprovadorDeEmail = 0;
+
         for (int i = 0; i < vendedoresCadastrados.size(); i++) {
-            if (vendedoresCadastrados.get(i).getCpf().equals(emailVendedor)) {
+            if (vendedoresCadastrados.get(i).getEmail().equals(emailVendedor)) {
                 System.out.println(vendedoresCadastrados.get(i).produtosVendidos);
                 i = vendedoresCadastrados.size();
                 aprovadorDeEmail++;
@@ -110,13 +110,14 @@ public class Vendedor extends Pessoa {
                             System.out.println("Digite 4 - Teclado");
                             System.out.println("Digite 5 - Fone");
                             System.out.println("Digite 6 - Desktop");
+                            System.out.println("Digite 7 - Para encerrar a compra");;
 
                             int escolhaDoCliente = input.nextInt();
 
                             switch (escolhaDoCliente) {
 
                                 case 1:
-
+////  ADICIONAR PRODUTOS NA LISTA DO CLIENTE
                                     vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Monitor, por R$ 600,00. Comprado no dia: " + LocalDate.now());
                                     break;
 
