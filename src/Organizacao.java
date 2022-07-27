@@ -18,6 +18,7 @@ public class Organizacao {
             System.out.println("7: Pesquisar compras de um cliente");
             System.out.println("8: Pesquisar vendas de um vendedor");
             System.out.println("9: Finalizar");
+            System.out.println("");
             String opcao = input.next();
             switch (opcao) {
                 case "1":
