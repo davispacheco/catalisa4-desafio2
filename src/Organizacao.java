@@ -14,7 +14,9 @@ public class Organizacao {
             System.out.println("4: Listar clientes cadastrados");
             System.out.println("5: Listar vendedores cadastrados");
             System.out.println("6: Listar vendas cadastradas");
-            System.out.println("7: Finalizar");
+            System.out.println("7: Pesquisar compras de um cliente");
+            System.out.println("8: Pesquisar vendas de um vendedor");
+            System.out.println("9: Finalizar");
             String opcao = input.next();
             switch (opcao) {
                 case "1":
@@ -36,6 +38,11 @@ public class Organizacao {
                      //Invoca o método listar da classe Venda
                     break;
                 case "7":
+                    cliente.buscarCompras(); //Pesquisar compras do cliente
+                    break;
+                case "8":
+//                    vendedor.buscarVendas(); //Pesquisar vendas do vendedor
+                case "9":
                     System.out.println("Fim do programa!");
                     repeticaoMenu = false; // Encerra o laço de repetição
                     break;
