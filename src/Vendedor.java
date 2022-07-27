@@ -103,7 +103,7 @@ public class Vendedor extends Pessoa {
                     cliente.listar();
                     int clienteEscolhido = input.nextInt();
 
-                    if ((clienteEscolhido >= 0) && (clienteEscolhido <= cliente.tamanhoLista())) {
+                    if (clienteEscolhido >= 0 && (clienteEscolhido <= cliente.getClientes().size()){
 
                         while (compra == true) {
                             System.out.println("Qual produto foi vendido? Segue as opções: ");

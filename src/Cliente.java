@@ -24,7 +24,7 @@ public class Cliente extends Pessoa {
         String novoNome = scan.next();
         System.out.println("Qual o CPF do cliente?");
         String novoCPF = scan.next();
-        System.out.println("Qual o email do cliente (use o formato xxxx@xxxx.com");
+        System.out.println("Qual o email do cliente (use o formato xxxx@xxxx.com) ");
         String novoEmail = scan.next();
         Cliente clientenovo = new Cliente(novoNome, novoCPF, novoEmail);
         if (novoEmail.contains("@")) {
