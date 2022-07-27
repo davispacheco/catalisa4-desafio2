@@ -41,7 +41,7 @@ public class Organizacao {
                     cliente.buscarCompras(); //Pesquisar compras do cliente
                     break;
                 case "8":
-                    vendedor.buscarVendas(); //Pesquisar vendas do vendedor
+//                    vendedor.buscarVendas(); //Pesquisar vendas do vendedor
                 case "9":
                     System.out.println("Fim do programa!");
                     repeticaoMenu = false; // Encerra o laço de repetição
