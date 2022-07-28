@@ -7,14 +7,10 @@ public class Cliente extends Pessoa {
     private ArrayList<String> produtosComprados = new ArrayList<>();
     Scanner scan = new Scanner(System.in);
 
-    public Cliente() {
-        super();
-        this.produtosComprados = produtosComprados;
-    }
 
-    public Cliente(String nome, String cpf, String email) {
+    public Cliente(String nome, String cpf, String email, ArrayList produtosComprados) {
         super(nome, cpf, email);
-        this.produtosComprados = produtosComprados;
+
     }
 
     @Override
@@ -26,7 +22,7 @@ public class Cliente extends Pessoa {
         String novoCPF = scan.next();
         System.out.println("Qual o email do cliente (use o formato xxxx@xxxx.com) ");
         String novoEmail = scan.next();
-        Cliente clientenovo = new Cliente(novoNome, novoCPF, novoEmail);
+        Cliente clientenovo = new Cliente(novoNome, novoCPF, novoEmail, null);
         if (novoEmail.contains("@")) {
             boolean adicionar = true;
 
@@ -81,10 +77,10 @@ public class Cliente extends Pessoa {
                  for (int j = 0; j < clientes.get(i).produtosComprados.size(); j++) {
                      System.out.println("Produto " +(j+1) +": " +clientes.get(i).produtosComprados.get(j));
 
-
+                     aprovadorDeCPF++;
                  }
-                 aprovadorDeCPF++;
-                 break;
+
+
              }
              }
 

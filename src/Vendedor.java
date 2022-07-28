@@ -12,7 +12,7 @@ public class Vendedor extends Pessoa {
 
     public Vendedor(String nome, String cpf, String email, ArrayList produtosVendidos) {
         super(nome, cpf, email);
-        this.vendedoresCadastrados = vendedoresCadastrados;
+
 
     }
 
@@ -109,11 +109,14 @@ public class Vendedor extends Pessoa {
 
                 System.out.println("Qual vendedor realizou a venda? ");
                 System.out.println("Vendedores cadastrados: ");
+                System.out.println("Digite o numero correspondente.");
                 listar();
 
                 int vendedorEscolhido = input.nextInt();
 
                 if ((vendedorEscolhido >= 0) && (vendedorEscolhido <= vendedoresCadastrados.size())) {
+                    System.out.println("");
+                    System.out.println("Escolha o cliente, digitando o numero correspondente");
                     cliente.listar();
                     int clienteEscolhido = input.nextInt();
 
@@ -136,6 +139,7 @@ public class Vendedor extends Pessoa {
 
                                 case 1:
                                     vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Monitor, por R$ 600,00. Comprado no dia: " + LocalDateTime.now());
+
                                     break;
 
                                 case 2:
