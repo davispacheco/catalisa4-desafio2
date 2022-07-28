@@ -96,4 +96,12 @@ public class Cliente extends Pessoa {
     public void setClientes(ArrayList<Cliente> clientes) {
         this.clientes = clientes;
     }
+
+    public ArrayList<String> getProdutosComprados() {
+        return produtosComprados;
+    }
+
+    public void setProdutosComprados(ArrayList<String> produtosComprados) {
+        this.produtosComprados = produtosComprados;
+    }
 }

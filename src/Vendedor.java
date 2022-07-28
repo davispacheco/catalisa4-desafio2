@@ -139,27 +139,32 @@ public class Vendedor extends Pessoa {
 
                                 case 1:
                                     vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Monitor, por R$ 600,00. Comprado no dia: " + LocalDateTime.now());
-
+                                    cliente.getClientes().get(clienteEscolhido).getProdutosComprados().add("Monitor, por R$ 600,00. Comprado no dia: " + LocalDateTime.now());
                                     break;
 
                                 case 2:
                                     vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Notebook, por R$ 3.000,00. Comprado no dia: " + LocalDateTime.now());
+                                    cliente.getClientes().get(clienteEscolhido).getProdutosComprados().add("Notebook, por R$ 3.000,00. Comprado no dia: " + LocalDateTime.now());
                                     break;
 
                                 case 3:
                                     vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Mouse, por R$ 50,00. Comprado no dia: " + LocalDateTime.now());
+                                    cliente.getClientes().get(clienteEscolhido).getProdutosComprados().add("Mouse, por R$ 50,00. Comprado no dia: " + LocalDateTime.now());
                                     break;
 
                                 case 4:
                                     vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Teclado, por R$ 90,00. Comprado no dia: " + LocalDateTime.now());
+                                    cliente.getClientes().get(clienteEscolhido).getProdutosComprados().add("Teclado, por R$ 90,00. Comprado no dia: " + LocalDateTime.now());
                                     break;
 
                                 case 5:
                                     vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Fone, por R$ 180,00. Comprado no dia: " + LocalDateTime.now());
+                                    cliente.getClientes().get(clienteEscolhido).getProdutosComprados().add("Fone, por R$ 180,00. Comprado no dia: " + LocalDateTime.now());
                                     break;
 
                                 case 6:
                                     vendedoresCadastrados.get(vendedorEscolhido).produtosVendidos.add("Desktop, por R$ 2.400,00. Comprado no dia: " + LocalDateTime.now());
+                                    cliente.getClientes().get(clienteEscolhido).getProdutosComprados().add("Desktop, por R$ 2.400,00. Comprado no dia: " + LocalDateTime.now());
                                     break;
 
                                 case 7:
