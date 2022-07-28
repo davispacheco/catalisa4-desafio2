@@ -76,7 +76,7 @@ public class Cliente extends Pessoa {
          String pesquisaCPF = scan.next();
          int aprovadorDeCPF = 0;
 
-         for (int i = 0; i < produtosComprados.size(); i++) {
+         for (int i = 0; i < clientes.size(); i++) {
              if (clientes.get(i).getCpf().equals(pesquisaCPF)) {
                  for (int j = 0; j < clientes.get(i).produtosComprados.size(); j++) {
                      System.out.println("Produto " +(j+1) +": " +clientes.get(i).produtosComprados.get(j));
