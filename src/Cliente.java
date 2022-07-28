@@ -77,9 +77,9 @@ public class Cliente extends Pessoa {
                  for (int j = 0; j < clientes.get(i).produtosComprados.size(); j++) {
                      System.out.println("Produto " +(j+1) +": " +clientes.get(i).produtosComprados.get(j));
 
-                     aprovadorDeCPF++;
-                 }
 
+                 }
+                 aprovadorDeCPF++;
 
              }
              }
